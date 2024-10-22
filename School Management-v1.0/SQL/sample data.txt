@@ -1,0 +1,122 @@
+-- Insert sample data into the student table
+INSERT INTO student (admissionNumber, Name, DOB, DOJ, address, phoneNumber_1, phoneNumber_2)
+VALUES
+    (1, 'Alice', '2005-03-15', '2020-04-01', '123 Maple St', '1234567890', '9876543210'),
+    (2, 'Bob', '2006-07-22', '2019-04-01', '456 Oak Ave', '1231231234', '4321432143'),
+    (3, 'Charlie', '2005-11-10', '2020-04-01', '789 Pine Rd', '1112223333', '3332221111'),
+    (4, 'David', '2006-02-14', '2019-04-01', '101 Elm St', '4445556666', '6665554444'),
+    (5, 'Eva', '2007-05-18', '2021-04-01', '202 Cedar St', '7778889999', '9998887777'),
+    (6, 'Frank', '2005-06-20', '2019-04-01', '303 Birch Rd', '1122334455', '5544332211'),
+    (7, 'Grace', '2006-09-25', '2020-04-01', '404 Walnut Ave', '6677889900', '0099887766'),
+    (8, 'Hannah', '2007-12-30', '2021-04-01', '505 Spruce Ln', '2233445566', '6655443322'),
+    (9, 'Ivy', '2005-04-08', '2019-04-01', '606 Aspen St', '3344556677', '7766554433'),
+    (10, 'Jack', '2006-08-19', '2020-04-01', '707 Willow Dr', '4455667788', '8877665544');
+
+-- Insert sample data into the class table
+INSERT INTO class (Class, Section, classId)
+VALUES
+    ('10A', 'A', 1),
+    ('10B', 'B', 2),
+    ('10C', 'C', 3),
+    ('11A', 'A', 4),
+    ('11B', 'B', 5),
+    ('11C', 'C', 6),
+    ('12A', 'A', 7),
+    ('12B', 'B', 8),
+    ('12C', 'C', 9),
+    ('12D', 'D', 10);
+
+-- Insert sample data into the struc_class table
+INSERT INTO struc_class (admissionNumber, classId, Roll_No, teacherId)
+VALUES
+    (1, 1, 1, 101),
+    (2, 2, 2, 102),
+    (3, 3, 3, 103),
+    (4, 4, 4, 104),
+    (5, 5, 5, 105),
+    (6, 6, 6, 106),
+    (7, 7, 7, 107),
+    (8, 8, 8, 108),
+    (9, 9, 9, 109),
+    (10, 10, 10, 110);
+
+-- Insert sample data into the teacher table
+INSERT INTO teacher (teacherName, ifAdmin, teacherId, classId, password)
+VALUES
+    ('Mr. Smith', 'Y', 101, 1, 'pass101'),
+    ('Mrs. Johnson', 'N', 102, 2, 'pass102'),
+    ('Mr. Brown', 'N', 103, 3, 'pass103'),
+    ('Ms. Davis', 'N', 104, 4, 'pass104'),
+    ('Mr. Miller', 'N', 105, 5, 'pass105'),
+    ('Ms. Wilson', 'Y', 106, 6, 'pass106'),
+    ('Mr. Moore', 'N', 107, 7, 'pass107'),
+    ('Mrs. Taylor', 'N', 108, 8, 'pass108'),
+    ('Ms. Anderson', 'N', 109, 9, 'pass109'),
+    ('Mr. Thomas', 'Y', 110, 10, 'pass110');
+
+-- Insert sample data into the attendance table
+INSERT INTO attendance (admissionNumber, date, status)
+VALUES
+    (1, '2024-09-01', 'P'),
+    (2, '2024-09-01', 'P'),
+    (3, '2024-09-01', 'A'),
+    (4, '2024-09-01', 'P'),
+    (5, '2024-09-01', 'P'),
+    (6, '2024-09-01', 'A'),
+    (7, '2024-09-01', 'P'),
+    (8, '2024-09-01', 'P'),
+    (9, '2024-09-01', 'A'),
+    (10, '2024-09-01', 'P');
+
+-- Insert sample data into the exam table
+INSERT INTO exam (examId, examName, dateOfExam)
+VALUES
+    (201, 'Midterm', '2024-09-10'),
+    (202, 'Finals', '2024-12-15'),
+    (203, 'Quiz 1', '2024-07-15'),
+    (204, 'Quiz 2', '2024-08-10'),
+    (205, 'Mock Exam', '2024-10-20'),
+    (206, 'Practical', '2024-09-05'),
+    (207, 'Unit Test', '2024-08-20'),
+    (208, 'Assessment', '2024-11-01'),
+    (209, 'Test 3', '2024-10-10'),
+    (210, 'Assignment', '2024-10-30');
+
+-- Insert sample data into the subject table
+INSERT INTO subject (subjectId, subjectName)
+VALUES
+    (301, 'Maths'),
+    (302, 'English'),
+    (303, 'Science'),
+    (304, 'History'),
+    (305, 'Geography'),
+    (306, 'Physics'),
+    (307, 'Chemistry'),
+    (308, 'Biology'),
+    (309, 'Computer'),
+    (310, 'Economics');
+
+-- Insert sample data into the mark_sheet table
+INSERT INTO mark_sheet (admissionNumber, examId, subjectId, marks, result)
+VALUES
+    (1, 201, 301, 85, 'P'),
+    (2, 201, 302, 75, 'P'),
+    (3, 201, 303, 90, 'P'),
+    (4, 202, 304, 65, 'P'),
+    (5, 202, 305, 88, 'P'),
+    (6, 202, 306, 45, 'F'),
+    (7, 203, 307, 92, 'P'),
+    (8, 203, 308, 78, 'P'),
+    (9, 203, 309, 56, 'P'),
+    (10, 203, 310, 67, 'P'),
+    (1, 202, 301, 70, 'P'),
+    (2, 202, 302, 82, 'P'),
+    (3, 202, 303, 88, 'P'),
+    (4, 202, 304, 95, 'P'),
+    (5, 202, 305, 60, 'P'),
+    (6, 202, 306, 80, 'P'),
+    (7, 203, 307, 70, 'P'),
+    (8, 203, 308, 65, 'P'),
+    (9, 203, 309, 55, 'P'),
+    (10, 203, 310, 40, 'F');
+
